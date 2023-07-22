@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+
+<h1> Formulario </h1>
+<form action="video.html" method="post" onsubmit="validarLogin(event)"> 
+    <label for=""> Usuario </label>
+    <input id="user" name="user" type="text" required> </imput>
+
+    <label for=""> Contraseña </label>
+    <input id="Password" name="Password" type="password" required> </imput>
+
+    <button type="submit"> Iniciar sesion </button>
+</form>
+<Script>
+    function validarLogin(event) {
+            // Evita el envío del formulario por defecto
+            event.preventDefault(); 
+            // Obtener los valores de usuario y contraseña
+            var username = document.getElementById('user').value;
+            var password = document.getElementById('Password').value;
+
+            // Validar los campos del formulario
+            if (username === 'admin' && password === 'batman') {
+                alert('Inicio de sesión exitoso');
+            window.location.href = './video.html';
+            // Aquí puedes redirigir al usuario a otra página o realizar otras acciones
+            } else {
+                alert('Usuario o contraseña incorrectos');
+            // Aquí puedes mostrar un mensaje de error o realizar otras acciones
+            }
+        }
+</Script>
+</body>
+</html>
